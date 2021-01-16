@@ -58,3 +58,13 @@ def test_nlopt():
     xopt = opt.optimize(x0)
 
     assert np.linalg.norm(xopt - np.array([2.746310775, 15.0])) < 1e-7
+
+    opt.set_ftol_rel(1.0e-20)
+
+    try:
+        xopt = opt.optimize(x0)
+    except Exception as e:
+        print("error:", e)
+        xopt = "error"
+    
+    assert xopt == "error"

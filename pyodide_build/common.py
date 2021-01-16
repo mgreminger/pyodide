@@ -16,6 +16,7 @@ DEFAULTLDFLAGS = " ".join(
         "-Werror",
         "-s", "EMULATE_FUNCTION_POINTER_CASTS=1",
         "-s", "SIDE_MODULE=1",
+        "-s", "DISABLE_EXCEPTION_CATCHING=0",
         "-s", "WASM=1",
         "-s", "BINARYEN_TRAP_MODE='clamp'",
         "--memory-init-file", "0",
