@@ -7,9 +7,13 @@ TOOLSDIR = ROOTDIR / "tools"
 TARGETPYTHON = ROOTDIR / "cpython" / "installs" / "python-3.8.2"
 
 # Leading space so that argparse doesn't think this is a flag
-DEFAULTCFLAGS = " -fPIC"
-DEFAULTCXXFLAGS = ""
 # fmt: off
+DEFAULTCFLAGS = " ".join(
+    [
+        "-fPIC",
+        "-s", "DISABLE_EXCEPTION_CATCHING=0",
+    ]
+DEFAULTCXXFLAGS = ""
 DEFAULTLDFLAGS = " ".join(
     [
         "-O2",
