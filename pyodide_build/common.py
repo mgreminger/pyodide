@@ -13,6 +13,7 @@ DEFAULTCFLAGS = " ".join(
         "-fPIC",
         "-s", "DISABLE_EXCEPTION_CATCHING=0",
     ]
+)
 DEFAULTCXXFLAGS = ""
 DEFAULTLDFLAGS = " ".join(
     [
