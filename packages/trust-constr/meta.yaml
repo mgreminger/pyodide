@@ -1,0 +1,15 @@
+package:
+  name: trust-constr
+  version: 1.0.0
+
+source:
+  sha256: e79e5330caa229ee69714faf5e6968e6e33a384d3e439a6ebbc4852f4b5e2731
+  url: https://files.pythonhosted.org/packages/81/f0/6eb0de8b32b3b31b0d179a898c5b21db387ade27609cc94b1d6ec1f10b61/trust-constr-1.0.0.tar.gz
+
+requirements:
+  run:
+    - numpy
+
+test:
+  imports:
+  - trust_constr
